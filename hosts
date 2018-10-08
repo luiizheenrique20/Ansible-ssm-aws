@@ -1,0 +1,3 @@
+35.180.169.37 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/pem/Amazon-Linux.pem
+35.180.152.159 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/pem/RedHat-Linux.pem
+#35.180.116.130 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/pem/Ubuntu-Linux.pem
