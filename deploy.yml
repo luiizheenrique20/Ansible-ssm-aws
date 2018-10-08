@@ -10,8 +10,6 @@
      when: (ansible_distribution == "CentOS" and ansible_distribution_major_version == "6") or
            (ansible_distribution == "RedHat" and ansible_distribution_major_version == "7")
 
-      #- ansible_os_family == 'CentOS'
-      #- ansible_distribution == 'Red Hat Enterprise Linux'
    - name: Install python
      apt:
        name: python
@@ -19,23 +17,6 @@
      when:
        - ansible_distribution == "Debian"
        - ansible_distribution == "Ubuntu"
-
-   #- name: Install python2 for ansible
-     #raw: test -e /usr/bin/python || (apt update -y && apt install python -y)
-     #args:
-       #executable: /usr/bin/python
-
-   #- name: Install Python in Debian & Ubuntu
-     #raw: sudo apt install python -y
-     #changed_when:
-       #- ansible_distribution == "Debian"
-       #- ansible_distribution == "Ubuntu"
-
-   #- name: Install Python
-     #command: sudo apt install python -y
-     #when:
-       #- ansible_distribution == "Debian"
-       #- ansible_distribution == "Ubuntu"
 
    - name: Install Python-Pip
      command: sudo apt install python-pip -y
